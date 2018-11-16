@@ -1,0 +1,78 @@
+extends layout
+
+block vars
+    - let title = '火星人科技'
+
+block content
+    // 幻灯片
+    #banner.banner
+        #owl-demo.owl-carousel
+            a.item(target='_blank' style='background-image:url(/public/images/home/banner.jpg)')
+                img(src='/public/images/home/banner.jpg')
+            a.item(target='_blank' style='background-image:url(/public/images/home/banner.jpg)')
+                img(src='/public/images/home/banner.jpg')
+            a.item(target='_blank' style='background-image:url(/public/images/home/banner.jpg)')
+                img(src='/public/images/home/banner.jpg')
+    // 幻灯片
+    .space_hx  
+    .i_line
+        em  
+    .space_hx  
+    ul.i_ma.clearfix
+        li
+            a(href='javascript:;')
+                img(src='/public/images/home/pic1.jpg')
+            .title
+                a(href='javascript:;')
+                    em 01.
+                    | 火星人科技
+            .des 广西南宁市火星人信息科技有限公司是由飞行极客、航测专家、GIS等专业人士组建，核心成员......
+            .more
+                a(href='javascript:;') MORE
+        li
+            a(href='javascript:;')
+                img(src='/public/images/home/pic2.jpg')
+            .title
+                a(href='javascript:;')
+                    em 02.
+                    | 企业文化
+            .des 广西南宁市火星人信息科技有限公司是由飞行极客、航测专家、GIS等专业人士组建，核心成员......
+            .more
+                a(href='javascript:;') MORE
+        li
+            a(href='javascript:;')
+                img(src='/public/images/home/pic3.jpg')
+            .title
+                a(href='javascript:;')
+                    em 03.
+                    | 工作方案
+            .des 广西南宁市火星人信息科技有限公司是由飞行极客、航测专家、GIS等专业人士组建，核心成员......
+            .more
+                a(href='javascript:;') MORE
+        li
+            a(href='javascript:;')
+                img(src='/public/images/home/pic4.jpg')
+            .title
+                a(href='javascript:;')
+                    em 04.
+                    | 产品中心
+            .des 广西南宁市火星人信息科技有限公司是由飞行极客、航测专家、GIS等专业人士组建，核心成员......
+            .more
+                a(href='javascript:;') MORE
+    .space_hx  
+
+block script
+    script.
+            $(function(){
+            $('#owl-demo').owlCarousel({
+                items: 1,
+                navigation: true,
+                navigationText: ["上一个","下一个"],
+                autoPlay: true,
+                stopOnHover: true
+            }).hover(function(){
+                $('.owl-buttons').show();
+            }, function(){
+                $('.owl-buttons').hide();
+            });
+        });
